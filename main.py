@@ -1,4 +1,4 @@
-x = input("введите номер задания:")
+x = int(input("введите номер задания:"))
 
 #11.1
 def f1():
@@ -21,6 +21,20 @@ if x == 1:
 
 # 11.2
 def f2():
+    class Restaurant:
+        def __init__(self, restaurant_name, cuisine_type):
+            self.restaurant_name = restaurant_name
+            self.cuisine_type = cuisine_type
+        def describe_restaurant(self):
+            print(f'Название ресторана: {self.restaurant_name} Тип кухни: {self.cuisine_type}')
+        def open_restaurant(self):
+            print('Открыто с 12:00')
+    newRestaurant = Restaurant(input(), input())
+    print(newRestaurant.restaurant_name)
+    print(newRestaurant.cuisine_type)
+    newRestaurant.describe_restaurant()
+    newRestaurant.open_restaurant()
+    print('\n')
     Restaurant1 = Restaurant('Kuznyahouse', 'европейская, авторская')
     Restaurant2 = Restaurant('Co-Op Garage', 'европейская, американская, итальянская')
     Restaurant3 = Restaurant('Kiki', 'турецкая, авторская')
@@ -29,7 +43,7 @@ def f2():
     Restaurant3.describe_restaurant()
     print('\n')
 if x==2:
-    f1(), f2()
+    f2()
 
 #11.3
 def f3():
